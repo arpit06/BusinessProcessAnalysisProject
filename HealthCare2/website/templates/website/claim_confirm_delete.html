@@ -1,0 +1,49 @@
+
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Provider Management Center</title>
+    <!-- Bootstrap core CSS -->
+    <!--<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/website/manager">Healthcare</a>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="/website/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav><br><br>
+    <center><img src="{% static 'images/questionmark.png' %}" height="100" width="100">
+    <h2>Delete Confirmation</h2></center><br><br><br><br><br><br>
+    <div align="center">
+        <form method="post">
+         <p align="center">
+             {% csrf_token %}
+             Are you sure you want to delete "{{ object }}" ?
+             <br><br>
+             <input type="submit" value="Submit" />
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>
+<body>
+
+</body>
+</html>

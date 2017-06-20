@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrator CRUD</title>
+    <!-- Bootstrap core CSS -->
+    <!--<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/website/manager/">Healthcare</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/website/manager/">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" >Provider
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/website/provider/add/">Add Provider</a></li>
+          <li><a href="/website/provider/view/">View Provider</a></li>
+        </ul>
+      </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" >Staff
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/website/staff/add/">Add Staff</a></li>
+          <li><a href="/website/staff/view/">Manage Staff</a></li>
+        </ul>
+      </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" >Patient
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/website/patient/add/">Add Patient</a></li>
+            <li><a href="/website/patient/view/">View Patients</a></li>
+        </ul>
+      </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" >Claim
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+           <li><a href="/website/claim/manage/view">Assign Claim</a></li>
+
+
+        </ul>
+      </li>
+    </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="/website/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+    </nav><br><br>
+<div class='jumbotron text-center'>
+    <h2>Insurance Claim Administrator Console</h2>
+</div>
+
+<div class='container-fluid'>
+
+    <div class='row'>
+
+        <div class='col-md-4 text-center'></div>
+        <div class='col-md-4'>
+            <table class="table table-striped table-responsive">
+            <tbody>
+                <tr>
+                    <td><img src="{% static 'images/staff.png' %}" height="50" width="50"></td>
+                    <td><h3> <a href="{% url 'view-staff' %}"> Manage Staff </a></h3></td>
+                </tr>
+
+                 <tr>
+                    <td><img src="{% static 'images/patient.png' %}" height="50" width="50"></td>
+                    <td><h3> <a href="{% url 'view-patient' %}"> Manage Patients </a></h3></td>
+                </tr>
+
+                <tr>
+                    <td><img src="{% static 'images/hospital.png' %}" height="50" width="50"></td>
+                    <td> <h3> <a href="{% url 'view-provider' %}"> Manage Providers </a></h3></td>
+                </tr>
+
+                <tr>
+                    <td><img src="{% static 'images/claim.png' %}" height="50" width="50"></td>
+                    <td> <h3> <a href="{% url 'view-claim-mgr' %}"> Manage Claims </a></h3></td>
+                </tr>
+
+                </table>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Images/login.ico">
+      <title>Signin for Claims System</title>
+    <!-- Bootstrap core CSS -->
+    <!--<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+            <div class="row">
+                <img src="{% static 'images/featured-life-insurance.png' %}" class="img-responsive">
+            </div>
+    </div>
+    <div class="container">
+      <form class="form-signin" method="post">
+          {%csrf_token%}
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus name="username">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" name="login1-button">Sign in</button>
+      </form>
+        <p class="text-center">New User? <a href="#myModal" class="btn-med" data-toggle="modal">Register Here </a></p>
+
+        <h3><center><a href="{% url 'create-claim' %}"> File for a Claim! </a></center></h3>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">New User Creation</h4>
+                    </div>
+                    <div class="modal-body">
+                    <p> Contact your Manager to raise a request for New User Creation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </body>
+</html>

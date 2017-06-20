@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Sign up</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  div{
+  margin:0 auto;
+  width:500px;
+  }
+  </style>
+</head>
+<body>
+<h2>Employee Sign Up</h2>
+<form>
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" class="form-control" id="firstName">
+	<label for="lastName">Last Name:</label>
+    <input type="text" class="form-control" id="lastName">
+	<label for="userName">User Name:</label>
+    <input type="text" class="form-control" id="userName">
+    <label for="pwd">Password:</label>
+    <input type="text" class="form-control" id="pwd">
+	<label for="repwd">Re-enter Password:</label>
+    <input type="text" class="form-control" id="repwd">
+	<label for="role">Role:</label><br>
+	<select name="role">
+			<option value="reviewer">Reviewer</option>
+			<option value="manager">Manager</option>
+	</select>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label><br>
+  </div>
+  <div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+  </div>
+</form>
+</body>
+</html>
