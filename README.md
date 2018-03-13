@@ -7,4 +7,5 @@ Trying to provide a consolidated medical insurance claim system to the users. Th
 Seperate login environments and priviliges for providers and insurance partners.
 
 Solution
+
 One stop solution for Hospitals, primary care providers and pharmacies to submit insurance claims and follow up on status and reports.
